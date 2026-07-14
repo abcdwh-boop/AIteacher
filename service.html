@@ -658,6 +658,95 @@
                 transition: none
             }
         }
+                /* ===== 링크 모음 박스 ===== */
+        .linkbox {
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 1.3rem 1.4rem;
+            margin: 1.6rem 0;
+        }
+
+        .linkbox .lb-title {
+            font-family: var(--disp);
+            font-weight: 800;
+            font-size: 1.1rem;
+            letter-spacing: -.01em;
+            margin-bottom: .3rem;
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+        }
+
+        .linkbox .lb-desc {
+            font-size: .92rem;
+            color: var(--ink-soft);
+            margin-bottom: 1rem;
+        }
+
+        .linkbox .lb-list {
+            display: grid;
+            gap: .55rem;
+        }
+
+        .linkbox .lb-link {
+            display: flex;
+            align-items: center;
+            gap: .7rem;
+            text-decoration: none;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            padding: .7rem .9rem;
+            transition: .18s;
+        }
+
+        .linkbox .lb-link:hover {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px var(--primary-soft);
+            transform: translateY(-1px);
+        }
+
+        .linkbox .lb-link .ico {
+            flex: none;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 8px;
+            background: var(--primary-soft);
+            color: var(--primary);
+            display: grid;
+            place-items: center;
+            font-size: 1rem;
+        }
+
+        .linkbox .lb-link .txt {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.4;
+        }
+
+        .linkbox .lb-link .lk-name {
+            font-weight: 700;
+            font-size: .95rem;
+            color: var(--ink);
+        }
+
+        .linkbox .lb-link .lk-sub {
+            font-size: .8rem;
+            color: var(--ink-faint);
+        }
+
+        .linkbox .lb-link .arr {
+            margin-left: auto;
+            color: var(--ink-faint);
+            transition: .18s;
+        }
+
+        .linkbox .lb-link:hover .arr {
+            color: var(--primary);
+            transform: translateX(3px);
+        }
+
     </style>
 </head>
 
@@ -700,6 +789,41 @@
 
     <section>
         <div class="wrap reveal">
+                            <!-- ▼▼▼ 링크 박스 (상단) ▼▼▼ -->
+                <div class="linkbox reveal">
+
+                    <!-- ✏️ [글 쓸 위치 1] 박스 제목을 여기에 적으세요 -->
+                    <div class="lb-title">🔗 시작하기 전에 열어둘 링크</div>
+
+                    <!-- ✏️ [글 쓸 위치 2] 박스 설명을 여기에 적으세요 -->
+                    <p class="lb-desc">따라 하면서 자주 왔다 갔다 하는 사이트예요. 새 탭으로 미리 열어두면 편합니다.</p>
+
+                    <div class="lb-list">
+
+                        <!-- 🔗 [링크 넣는 위치] href="" 안에 주소를 넣으세요. 아래 블록을 복사해서 링크를 추가할 수 있어요 -->
+                        <a class="lb-link" href="여기에_링크_주소" target="_blank" rel="noopener">
+                            <span class="ico">↗</span>
+                            <span class="txt">
+                                <span class="lk-name">링크 이름</span>
+                                <span class="lk-sub">간단한 설명 (없으면 이 줄 삭제)</span>
+                            </span>
+                            <span class="arr">→</span>
+                        </a>
+
+                        <!-- 🔗 링크 추가 예시 (필요한 만큼 위 블록을 복사해서 붙여넣기) -->
+                        <a class="lb-link" href="여기에_링크_주소" target="_blank" rel="noopener">
+                            <span class="ico">↗</span>
+                            <span class="txt">
+                                <span class="lk-name">링크 이름</span>
+                                <span class="lk-sub">간단한 설명 (없으면 이 줄 삭제)</span>
+                            </span>
+                            <span class="arr">→</span>
+                        </a>
+
+                    </div>
+                </div>
+                <!-- ▲▲▲ 링크 박스 (상단) 끝 ▲▲▲ -->
+
             <h2 class="stitle">Firebase 방명록, 7단계</h2>
             <p class="sintro">앞의 두 유형과 달리 <b>Firebase 콘솔에서 그릇(데이터베이스)을 먼저 만들고</b>, 그 열쇠(설정)를 AI에게 건네 앱을 짓게 합니다. 순서대로
                 따라오세요. 한 반, 하루 행사 정도는 <b>무료 등급(Spark)</b>으로 충분해요.</p>
